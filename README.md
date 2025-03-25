@@ -19,9 +19,13 @@ This project is a Telegram bot for tracking expenses along with a FastAPI backen
 ## Project Structure
 
 expense_tracker/
+
 ├── README.md # Project description and instructions.
+
 ├── requirements.txt # List of dependencies.
+
 ├── server.py # FastAPI server implementation.
+
 └── bot.py # Telegram bot implementation using aiogram.
 
 ## Requirements
@@ -35,4 +39,39 @@ Make sure you have [Python 3.8+](https://www.python.org/downloads/) installed.
    ```bash
    git clone https://github.com/yourusername/expense_tracker.git
    cd expense_tracker
+   ```
+
+2. **Install dependencies:**
+
+   Use pip to install all required packages listed in requirements.txt:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Running the FastAPI Server:**
+
+   1. Open a terminal in the project directory.
+   2. Start the server using Uvicorn with auto-reload:
+
+   ```bash
+   uvicorn server:app --reload
+   ```
+
+   or
+
+   ```bash
+   python -m uvicorn server:app --reload
+   ```
+
+   The server will be available at http://localhost:8000.
+
+4. **Running the Telegram Bot:**
+
+   1. Open a separate terminal in the project directory.
+   2. Make sure you have updated BOT_TOKEN in bot.py with your actual Telegram Bot token.
+   3. Start the bot by running:
+
+   ```bash
+   python bot.py
    ```
